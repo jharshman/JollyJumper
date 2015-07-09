@@ -26,9 +26,6 @@ int main(void) {
                 
                 memset(d,0,sizeof(a));  // zero the array
 
-                for(int k=0; k< n; k++)
-                        cout << a[k] << endl;
-
                 isjolly=true;
                 for(i=0;i<n-1;i++) {
                         int absolute=abs(a[i]-a[i+1]);
@@ -42,7 +39,7 @@ int main(void) {
                 if(isjolly)  
                         cout << "Jolly" << endl;
                 else 
-                        cout << "Not Jolly" << endl;
+                        cout << "Not jolly" << endl;
 
         }
 
