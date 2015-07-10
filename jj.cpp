@@ -13,8 +13,7 @@ using namespace std;
 #define ARRAYSIZE 3000
 
 int main(void) {
-        
-        int d[ARRAYSIZE];
+        int b[ARRAYSIZE];
         int a[ARRAYSIZE];
         int n;
         bool isjolly;
@@ -23,26 +22,23 @@ int main(void) {
                 int i;
                 for(i=0;i<n;i++)  // populate up to n
                         cin >> a[i];
-                
-                memset(d,0,sizeof(a));  // zero the array
 
+                memset(b,0,sizeof(a));  // zero the array
                 isjolly=true;
+
                 for(i=0;i<n-1;i++) {
                         int absolute=abs(a[i]-a[i+1]);
-                        if (d[absolute]==1||absolute<1||absolute>n-1) {
+                        if (b[absolute]==1||absolute<1||absolute>n-1) {
                                 isjolly=false;
                                 break;
                         }
-                        d[absolute]=1;
+                        b[absolute]=1;
                 }
-
                 if(isjolly)  
                         cout << "Jolly" << endl;
                 else 
                         cout << "Not jolly" << endl;
-
         }
-
         return 0;
-
 }
+
